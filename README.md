@@ -46,31 +46,31 @@ There are many EOS features that do not require your player to have an Epic Game
 
 | Feature | Status | Sample Scene Walkthrough | Requires Epic Games account |
 | :-- | :-: | :-- | :-: |
-|[Achievements](https://dev.epicgames.com/docs/game-services/achievements)                 | ✅ | ["Achievements"](/com.playeveryware.eos/Documentation~/scene_walkthrough/achievements_walkthrough.md)                                                  |   |
-|[Anti-Cheat](https://dev.epicgames.com/docs/game-services/anti-cheat)                     | ✅ | ["Information"](/com.playeveryware.eos/Documentation~/easy_anticheat_configuration.md)                                                                             |  |
-|[Authentication](https://dev.epicgames.com/docs/epic-account-services/auth-interface)     | ✅ | ["Auth & Friends"](/com.playeveryware.eos/Documentation~/scene_walkthrough/auth&friends_walkthrough.md), [Information](/com.playeveryware.eos/Documentation~/player_authentication.md) | ✔️ |
-|[Custom Invites](https://dev.epicgames.com/docs/game-services/custom-invites-interface)   | ✅ | ["Custom Invites"](/com.playeveryware.eos/Documentation~/scene_walkthrough/customInvites_walkthrough.md)                                               |  |
-|[Connect Interface](https://dev.epicgames.com/docs/game-services/eos-connect-interface)   | ✅ | ["Auth & Friends"](/com.playeveryware.eos/Documentation~/scene_walkthrough/auth&friends_walkthrough.md)                                                               |   |
-|[Ecommerce](https://dev.epicgames.com/docs/epic-games-store/tech-features-config/ecom)[^2]    | ✅ | ["Store"](/com.playeveryware.eos/Documentation~/scene_walkthrough/store_walkthrough.md), [Information](/com.playeveryware.eos/Documentation~/ecom.md)                                        | ✔️ |
-|[Friends](https://dev.epicgames.com/docs/epic-account-services/eos-friends-interface)     | ✅ | ["Auth & Friends"](/com.playeveryware.eos/Documentation~/scene_walkthrough/auth&friends_walkthrough.md)                                                               | ✔️ |
-|[Leaderboards](https://dev.epicgames.com/docs/game-services/leaderboards)                 | ✅ | ["Leaderboards"](/com.playeveryware.eos/Documentation~/scene_walkthrough/leaderboards_walkthrough.md)                                                               |   |
-|[Lobbies](https://dev.epicgames.com/docs/game-services/lobbies)                             | ✅ | ["Lobbies"](/com.playeveryware.eos/Documentation~/scene_walkthrough/lobbies_walkthrough.md)                                                                    |  |
+|[Achievements](https://dev.epicgames.com/docs/game-services/achievements)                 | ✅ | ["Achievements"](/Documentation~/scene_walkthrough/achievements_walkthrough.md)                                                  |   |
+|[Anti-Cheat](https://dev.epicgames.com/docs/game-services/anti-cheat)                     | ✅ | ["Information"](/Documentation~/easy_anticheat_configuration.md)                                                                             |  |
+|[Authentication](https://dev.epicgames.com/docs/epic-account-services/auth-interface)     | ✅ | ["Auth & Friends"](/Documentation~/scene_walkthrough/auth&friends_walkthrough.md), [Information](/com.playeveryware.eos/Documentation~/player_authentication.md) | ✔️ |
+|[Custom Invites](https://dev.epicgames.com/docs/game-services/custom-invites-interface)   | ✅ | ["Custom Invites"](/Documentation~/scene_walkthrough/customInvites_walkthrough.md)                                               |  |
+|[Connect Interface](https://dev.epicgames.com/docs/game-services/eos-connect-interface)   | ✅ | ["Auth & Friends"](/Documentation~/scene_walkthrough/auth&friends_walkthrough.md)                                                               |   |
+|[Ecommerce](https://dev.epicgames.com/docs/epic-games-store/tech-features-config/ecom)[^2]    | ✅ | ["Store"](/Documentation~/scene_walkthrough/store_walkthrough.md), [Information](/com.playeveryware.eos/Documentation~/ecom.md)                                        | ✔️ |
+|[Friends](https://dev.epicgames.com/docs/epic-account-services/eos-friends-interface)     | ✅ | ["Auth & Friends"](/Documentation~/scene_walkthrough/auth&friends_walkthrough.md)                                                               | ✔️ |
+|[Leaderboards](https://dev.epicgames.com/docs/game-services/leaderboards)                 | ✅ | ["Leaderboards"](/Documentation~/scene_walkthrough/leaderboards_walkthrough.md)                                                               |   |
+|[Lobbies](https://dev.epicgames.com/docs/game-services/lobbies)                             | ✅ | ["Lobbies"](/Documentation~/scene_walkthrough/lobbies_walkthrough.md)                                                                    |  |
 |[Logging Interface](https://dev.epicgames.com/docs/game-services/eos-logging-interface)   | ✅ | NA                                                                                                                               |  |
-|[Metrics](https://dev.epicgames.com/docs/game-services/eos-metrics-interface)             | ✅ | ["Metrics"](/com.playeveryware.eos/Documentation~/scene_walkthrough/metrics_walkthrough.md)                                                                    |  |
+|[Metrics](https://dev.epicgames.com/docs/game-services/eos-metrics-interface)             | ✅ | ["Metrics"](/Documentation~/scene_walkthrough/metrics_walkthrough.md)                                                                    |  |
 |[Epic Games Store Mods](https://dev.epicgames.com/docs/epic-games-store/tech-features-config/mods)      | ❌ | NA                                                                                                                               | ✔️ |
-|[NAT P2P](https://dev.epicgames.com/docs/game-services/p-2-p)                                               | ✅ | ["Peer 2 Peer"](/com.playeveryware.eos/Documentation~/scene_walkthrough/P2P_walkthrough.md), ["P2P Netcode"](/com.playeveryware.eos/Documentation~/scene_walkthrough/P2P_netcode_walkthrough.md) |  |
+|[NAT P2P](https://dev.epicgames.com/docs/game-services/p-2-p)                                               | ✅ | ["Peer 2 Peer"](/Documentation~/scene_walkthrough/P2P_walkthrough.md), ["P2P Netcode"](/com.playeveryware.eos/Documentation~/scene_walkthrough/P2P_netcode_walkthrough.md) |  |
 |[Platform Interface](https://dev.epicgames.com/docs/game-services/eos-platform-interface)                   | ✅ | NA |   |
-|[Player Data Storage](https://dev.epicgames.com/docs/game-services/player-data-storage)                     | ✅ | ["Player Data Storage"](/com.playeveryware.eos/Documentation~/scene_walkthrough/player_data_storage_walkthrough.md)                                                        |   |
-|[Presence](https://dev.epicgames.com/docs/epic-account-services/eos-presence-interface)                     | ✅ | ["Auth & Friends"](/com.playeveryware.eos/Documentation~/scene_walkthrough/auth&friends_walkthrough.md)                                                               | ✔️ |
+|[Player Data Storage](https://dev.epicgames.com/docs/game-services/player-data-storage)                     | ✅ | ["Player Data Storage"](/Documentation~/scene_walkthrough/player_data_storage_walkthrough.md)                                                        |   |
+|[Presence](https://dev.epicgames.com/docs/epic-account-services/eos-presence-interface)                     | ✅ | ["Auth & Friends"](/Documentation~/scene_walkthrough/auth&friends_walkthrough.md)                                                               | ✔️ |
 |[Progression Snapshot Interface](https://dev.epicgames.com/docs/epic-account-services/progression-snapshot) | ❌ | NA                                                                                                             | ✔️ |
-|[Reports](https://dev.epicgames.com/docs/game-services/reports-interface)                 | ✅ | ["Player Reports & Sanctions"](/com.playeveryware.eos/Documentation~/scene_walkthrough/player_reports_and_sanctions_walkthrough.md)                                               |  |
-|[Sanctions](https://dev.epicgames.com/docs/game-services/sanctions-interface)             | ✅ | ["Player Reports & Sanctions"](/com.playeveryware.eos/Documentation~/scene_walkthrough/player_reports_and_sanctions_walkthrough.md)                                               |  |
-|[Sessions](https://dev.epicgames.com/docs/game-services/sessions)                         | ✅ | ["Sessions & Matchmaking"](/com.playeveryware.eos/Documentation~/scene_walkthrough/sessions_and_matchmaking_walkthrough.md)                                                   |  |
+|[Reports](https://dev.epicgames.com/docs/game-services/reports-interface)                 | ✅ | ["Player Reports & Sanctions"](/Documentation~/scene_walkthrough/player_reports_and_sanctions_walkthrough.md)                                               |  |
+|[Sanctions](https://dev.epicgames.com/docs/game-services/sanctions-interface)             | ✅ | ["Player Reports & Sanctions"](/Documentation~/scene_walkthrough/player_reports_and_sanctions_walkthrough.md)                                               |  |
+|[Sessions](https://dev.epicgames.com/docs/game-services/sessions)                         | ✅ | ["Sessions & Matchmaking"](/Documentation~/scene_walkthrough/sessions_and_matchmaking_walkthrough.md)                                                   |  |
 |[Social Overlay](https://dev.epicgames.com/docs/epic-account-services/social-overlay-overview)[^2] / [UI Interface](https://dev.epicgames.com/docs/epic-account-services/eosui-interface) | ✅ | [Information](/com.playeveryware.eos/Documentation~/overlay.md)        | ✔️ |
-|[Stats](https://dev.epicgames.com/docs/game-services/eos-stats-interface)                 | ✅ | ["Leaderboards"](/com.playeveryware.eos/Documentation~/scene_walkthrough/leaderboards_walkthrough.md)                                                               |  |
-|[Title Storage](https://dev.epicgames.com/docs/game-services/title-storage)               | ✅ | ["Title Storage"](/com.playeveryware.eos/Documentation~/scene_walkthrough/title_storage_walkthrough.md)                                                              |  |
+|[Stats](https://dev.epicgames.com/docs/game-services/eos-stats-interface)                 | ✅ | ["Leaderboards"](/Documentation~/scene_walkthrough/leaderboards_walkthrough.md)                                                               |  |
+|[Title Storage](https://dev.epicgames.com/docs/game-services/title-storage)               | ✅ | ["Title Storage"](/Documentation~/scene_walkthrough/title_storage_walkthrough.md)                                                              |  |
 |[User Info Interface](https://dev.epicgames.com/docs/epic-account-services/eos-user-info-interface) | ✅ | NA                                                                                                                     | ✔️ |
-|[Voice with Lobbies](https://dev.epicgames.com/docs/game-services/voice#voicewithlobbies)   | ✅ | ["Lobbies"](/com.playeveryware.eos/Documentation~/scene_walkthrough/lobbies_walkthrough.md), [Information](/com.playeveryware.eos/Documentation~/enabling_voice.md)                            |  |
+|[Voice with Lobbies](https://dev.epicgames.com/docs/game-services/voice#voicewithlobbies)   | ✅ | ["Lobbies"](/Documentation~/scene_walkthrough/lobbies_walkthrough.md), [Information](/com.playeveryware.eos/Documentation~/enabling_voice.md)                            |  |
 |[Voice Trusted Server](https://dev.epicgames.com/docs/game-services/voice#voicewithatrustedserverapplication) | ❌ | NA                                                                                                           |  |
 
 Efforts will be made to add corresponding support to features as they are added to the Epic Online Services SDK. The table above reflects the features as of November 2023.
@@ -79,7 +79,7 @@ Efforts will be made to add corresponding support to features as they are added 
 
 ## Supported Platforms
 
-We currently support the following platforms, details of each can be found on our [Supported Platforms](/com.playeveryware.eos/Documentation~/supported_platforms.md) document:
+We currently support the following platforms, details of each can be found on our [Supported Platforms](/Documentation~/supported_platforms.md) document:
 
 * Windows
 * Linux
@@ -95,15 +95,15 @@ We currently support the following platforms, details of each can be found on ou
 ## Importing the Plugin Package
 
 There are two options to install the package:
-* Via a [UPM tarball](/com.playeveryware.eos/Documentation~/add_plugin.md#adding-the-package-from-a-tarball) _(easiest to get started quickly)_.
-* From a [git url](/com.playeveryware.eos/Documentation~/add_plugin.md#adding-the-package-from-a-git-url) _(this method has the possible advantage of keeping the plugin up-to-date, if that's something that you would prefer)_.
+* Via a [UPM tarball](/Documentation~/add_plugin.md#adding-the-package-from-a-tarball) _(easiest to get started quickly)_.
+* From a [git url](/Documentation~/add_plugin.md#adding-the-package-from-a-git-url) _(this method has the possible advantage of keeping the plugin up-to-date, if that's something that you would prefer)_.
 
-Once imported into your project, be sure to [Configure the Plugin](/com.playeveryware.eos/Documentation~/configure_plugin.md) to work with your game.
+Once imported into your project, be sure to [Configure the Plugin](/Documentation~/configure_plugin.md) to work with your game.
 
 ## Exploring Supported EOS Features
 
-### [Supported Epic Online Services Features](/com.playeveryware.eos/Documentation~/eos_features.md)
-### [How to import sample scenes into your project](/com.playeveryware.eos/Documentation~/samples.md)
+### [Supported Epic Online Services Features](/Documentation~/eos_features.md)
+### [How to import sample scenes into your project](/Documentation~/samples.md)
 
 # Support / Contact
 
@@ -117,14 +117,14 @@ For issues of a confidential nature (including support using this plugin on cons
 
 # Contributor Notes
 
-This is an open source project! We welcome you to make contributions. See our [Contributions](/com.playeveryware.eos/Documentation~/contributions.md) document for more information.
+This is an open source project! We welcome you to make contributions. See our [Contributions](/Documentation~/contributions.md) document for more information.
 
 # FAQ
 
-To disable the plugin for specific platforms, see [this](/com.playeveryware.eos/Documentation~/disable_plugin_per_platform.md) (which also explains why you might want to do this).
+To disable the plugin for specific platforms, see [this](/Documentation~/disable_plugin_per_platform.md) (which also explains why you might want to do this).
 
-See [our guide](/com.playeveryware.eos/Documentation~/command_line_export.md) on how to export the plugin from the command line. 
+See [our guide](/Documentation~/command_line_export.md) on how to export the plugin from the command line. 
 
-For issues of API Level compatibility, please read our [document](/com.playeveryware.eos/Documentation~/dotnet_quirks.md) on .NET Quirks and Unity compatibility.
+For issues of API Level compatibility, please read our [document](/Documentation~/dotnet_quirks.md) on .NET Quirks and Unity compatibility.
 
-For more FAQs see [Frequently Asked Questions](/com.playeveryware.eos/Documentation~/frequently_asked_questions.md).
+For more FAQs see [Frequently Asked Questions](/Documentation~/frequently_asked_questions.md).
