@@ -6,9 +6,9 @@ To function, the plugin needs some information from your EOS project. Be sure to
 
 ## In the Unity editor, Open ```EOS Plugin -> EOS Configuration```.
 
-![EOS Config Menu](/com.playeveryware.eos/Documentation~/images/eos-configuration-menu.png)
+![EOS Config Menu](/Documentation~/images/eos-configuration-menu.png)
 
-![EOS Configuration](/com.playeveryware.eos/Documentation~/images/eos_configuration.png)
+![EOS Configuration](/Documentation~/images/eos_configuration.png)
 
 ## Set product settings from Epic Developer Portal
 

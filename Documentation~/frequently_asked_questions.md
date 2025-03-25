@@ -30,7 +30,7 @@ To find out why and how to do so look see our documentation on [Unity Specific a
 
 ## How do I override sandbox or deployment IDs when publishing on the Epic Games Store?
 
-This functionality is outlined in our [document on the Epic Game Store](/com.playeveryware.eos/Documentation~/epic_game_store.md#overriding-sandbox-andor-deployment-id).
+This functionality is outlined in our [document on the Epic Game Store](/Documentation~/epic_game_store.md#overriding-sandbox-andor-deployment-id).
 
 ## How do I get the Epic Username?
 It depends on what one means by "Username".
@@ -85,12 +85,12 @@ The config file has to be in StreamingAssets so that the GfxPluginNativeRender c
 all of Unity has been bootstrapped so that the Plugin can hook all the appropriate things before the first graphics call by the Unity engine.
 
 > [!NOTE]
-> See [eos_config_security.md](/com.playeveryware.eos/Documentation~/eos_config_security.md) for more information. 
+> See [eos_config_security.md](/Documentation~/eos_config_security.md) for more information. 
 
 ## Why does the Demo Scene fail to load?
 
 There is a standard sample pack, and several extra packs in the EOS Unity Plugin. If a scene doesn't load, remember to import the wanted extra pack.
-Additionally, make sure all wanted sample scenes are included in the build settings as shown in steps 4.-6. of <a href="/com.playeveryware.eos/README.md#importing-samples">Importing the samples</a>.
+Additionally, make sure all wanted sample scenes are included in the build settings as shown in steps 4.-6. of <a href="/README.md#importing-samples">Importing the samples</a>.
 
 ## What is the correct way to log into the Epic Games Store?
 The correct way to connect to the Epic Games Store through your application would be to use the exchange code login method:
@@ -114,7 +114,7 @@ EOSManager.Instance.StartLoginWithLoginTypeAndToken(
 As a developer you will need to have an Epic Games account in order to interact with the [EOS Developer Portal](https://dev.epicgames.com/portal) and manage your product.
 
 ### As a player
-Players are given multiple login options, which are slightly different from platform to platform. Details of which login methods are supported by each platform are listed in our documentation outlining [login type by platform](/com.playeveryware.eos/Documentation~/login_type_by_platform.md).
+Players are given multiple login options, which are slightly different from platform to platform. Details of which login methods are supported by each platform are listed in our documentation outlining [login type by platform](/Documentation~/login_type_by_platform.md).
 
 ## What does the "DllNotFoundException" error mean? 
 
@@ -152,4 +152,4 @@ Or to install the libraries manually, go to the `lib/NativeCode` folder, find th
 
 On the EOS Configuration Editor Window there is a setting for `Platform Flags`. By adding `DisableOverlay` to your list of Platform Flags, the Epic Overlay will not be initialized during runtime. When this is configured the `EOSBootstrapper.exe` will not be included in Windows builds.
 
-See [`PlatformFlags.cs`](/com.playeveryware.eos/Runtime/EOS_SDK/Generated/Platform/PlatformFlags.cs)
+See [`PlatformFlags.cs`](/Runtime/EOS_SDK/Generated/Platform/PlatformFlags.cs)

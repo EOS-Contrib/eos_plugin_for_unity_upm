@@ -6,10 +6,10 @@
 
 - **Windows (Standalone x86 & x64)**
 - **Universal Windows Platform (x64)**
-- **[Android](/com.playeveryware.eos/Documentation~/android/README_Android.md)** [^1]
-- **[iOS](/com.playeveryware.eos/Documentation~/iOS/README_iOS.md)** [^1]
-- **[Linux](/com.playeveryware.eos/Documentation~/dev_env/Ubuntu_Development_Environment.md)** [^1]
-- **[MacOS](/com.playeveryware.eos/Documentation~/macOS/README_macOS.md)**
+- **[Android](/Documentation~/android/README_Android.md)** [^1]
+- **[iOS](/Documentation~/iOS/README_iOS.md)** [^1]
+- **[Linux](/Documentation~/dev_env/Ubuntu_Development_Environment.md)** [^1]
+- **[MacOS](/Documentation~/macOS/README_macOS.md)**
 - **Nintendo Switch**<br>
   _For details, please see the Nintendo Developer Portal._
 - **Xbox (One & Xbox Series X)**<br>

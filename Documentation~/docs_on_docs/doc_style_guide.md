@@ -35,18 +35,18 @@ Fundamentally (and very broadly speaking) every document should contain two or o
 
 ## Logo:
 
-Each document should start (before the document title) with the PlayEveryWare, Inc. logo. The image should be surrounded by a link (`<a> </a>`) tag with the `href` set to the main [README.md document](/com.playeveryware.eos/README.md), and with the width of the image set to 10%.
+Each document should start (before the document title) with the PlayEveryWare, Inc. logo. The image should be surrounded by a link (`<a> </a>`) tag with the `href` set to the main [README.md document](/README.md), and with the width of the image set to 10%.
 
 Markdown:
 ```markdown
-<a href="/com.playeveryware.eos/README.md">
-    <img src="/com.playeveryware.eos/Documentation~/images/PlayEveryWareLogo.gif" alt="PlayEveryWare, Inc. Logo" width="10%"/>
+<a href="/README.md">
+    <img src="/Documentation~/images/PlayEveryWareLogo.gif" alt="PlayEveryWare, Inc. Logo" width="10%"/>
 </a>
 ```
 
 What it looks like:
 
-<a href="/com.playeveryware.eos/README.md"><img src="/com.playeveryware.eos/Documentation~/images/PlayEveryWareLogo.gif" alt="PlayEveryWare, Inc. Logo" width="10%"/></a>
+<a href="/README.md"><img src="/Documentation~/images/PlayEveryWareLogo.gif" alt="PlayEveryWare, Inc. Logo" width="10%"/></a>
 
 ## Title:
 
@@ -131,14 +131,14 @@ An image can be displayed with the web link format, prefacing with an exclamatio
 Markdown example:
 
 ```markdown
-![unity tools package manager](/com.playeveryware.eos/Documentation~/images/unity_tools_package_manager.gif)
+![unity tools package manager](/Documentation~/images/unity_tools_package_manager.gif)
 ```
 
 What it looks like:
 
-![unity tools package manager](/com.playeveryware.eos/Documentation~/images/unity_tools_package_manager.gif)
+![unity tools package manager](/Documentation~/images/unity_tools_package_manager.gif)
 
-Always place images in the `/com.playeveryware.eos/Documentation~/images/` directory of the repository. In most cases, it is also appropriate to add a subdirectory to the images directory in order to keep related images organized. For instance, when creating a new document that contains a variety of images, it would be wise to create a subdirectory in the images folder to contain all the images for that new document.
+Always place images in the `/Documentation~/images/` directory of the repository. In most cases, it is also appropriate to add a subdirectory to the images directory in order to keep related images organized. For instance, when creating a new document that contains a variety of images, it would be wise to create a subdirectory in the images folder to contain all the images for that new document.
 
 > [!IMPORTANT] 
 > Never use an image in place of text (for instance do not take a screenshot of documentation from one area to include it in another). Aside from the issue of maintainability, the problem with this is that GitHub allows for dark and light modes, and the image will look wrong in one mode or the other. 
@@ -163,13 +163,13 @@ Example markdown linking to a specific section within a document:
 Example markdown linking to another document:
 
 ```markdown
-[Android README](/com.playeveryware.eos/Documentation~/android/README_Android.md)
+[Android README](/Documentation~/android/README_Android.md)
 ```
 
 Example markdown linking to a specific section of another document:
 
 ```markdown
-[Android Prerequisites](/com.playeveryware.eos/Documentation~/android/README_Android.md#prerequisites)
+[Android Prerequisites](/Documentation~/android/README_Android.md#prerequisites)
 ```
 
 > [!IMPORTANT]
