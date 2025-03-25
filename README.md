@@ -1,4 +1,4 @@
-<div align="center"> <img src="/com.playeveryware.eos/Documentation~/images/EOSPluginLogo.png" alt="EOS Plugin for Unity" /> </div>
+<div align="center"> <img src="/eos_plugin_for_unity_upm/Documentation~/images/EOSPluginLogo.png" alt="EOS Plugin for Unity" /> </div>
 
 <br />
 
