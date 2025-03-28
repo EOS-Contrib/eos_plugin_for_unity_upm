@@ -12,6 +12,21 @@
 
 </div>
 
+# YOUVE BEEN SLIMED
+
+I'm really struggling to understand the maintainers choice to close the github issues on play everyware's eos unity plugin. We had a major bug silently solved in a release, news to us! If only we had a place to publish an issue, and discuss, maybe we could ask a developer to add a fix to the release notes? Nevermind lets just use this hideous, proprietary forum instead. 🤢
+
+I can at least try to post here in case anyone else is getting a timeout around the hour mark, Your auth is expiring, and the listener to the notification used to be a NOOP!
+
+https://github.com/EOS-Contrib/eos_plugin_for_unity/commit/47bd72feb3bee79fd7daff6d74e0f02bdfe5d3a4 
+
+https://eoshelp.epicgames.com/s/article/Why-am-I-being-logged-out-after-1-hour-of-EOS
+
+LogEOSP2P(Warning): Attempted to get next received packet size with a LocalUserId that did not validate correctly. LocalUserId=[000...417] Result=[EOS_InvalidAuth]
+
+![image](https://github.com/user-attachments/assets/5d4de389-c64f-48b4-a42a-47cba3d353e3)
+
+
 # Overview
 
 The PlayEveryWare EOS Plugin for Unity brings the free services from Epic that connect players across all platforms and all stores to Unity in an easy-to-use package. Find more information on what services Epic Online Services encompasses, see here: [https://dev.epicgames.com/en-US/services](https://dev.epicgames.com/en-US/services) and to read the developer documentation on those services, see here: [https://dev.epicgames.com/docs/epic-online-services](https://dev.epicgames.com/docs/epic-online-services).
