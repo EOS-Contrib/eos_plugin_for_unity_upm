@@ -107,7 +107,7 @@ Once imported into your project, be sure to [Configure the Plugin](/Documentatio
 
 # Support / Contact
 
-EOS Plugin for Unity documentation can be found here on GitHub.
+EOS Plugin for Unity [documentation](/Documentation~) can be found here on GitHub.
 
 For questions or issues related to integration or usage of Epic Online Services, Epic Games Developer Portal, or the EOS Plugin for Unity, please create a discussion on the [EOS Developer Community](https://eoshelp.epicgames.com).
 
