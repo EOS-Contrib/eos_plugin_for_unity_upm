@@ -119,4 +119,4 @@ Major.Minor.Patch
 
 ## Unit Testing
 
-See [our documentation on unit testing](/com.playeveryware.eos/Documentation~/unit_testing.md).
+See [our documentation on unit testing](/Documentation~/unit_testing.md).
