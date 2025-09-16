@@ -1,9 +1,3 @@
-<a href="/com.playeveryware.eos/README.md"><img src="/com.playeveryware.eos/Documentation~/images/PlayEveryWareLogo.gif" alt="Lobby Screenshot" width="5%"/></a>
-
-<div align="center"> <img src="/com.playeveryware.eos/Documentation~/images/EOSPluginLogo.png" alt="PlayEveryWare EOS Plugin for Unity" /> </div>
-
-<br />
-
 <div align="left">
   
 <a href="">[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)</a>
