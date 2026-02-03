@@ -1,5 +1,3 @@
-<a href="/com.playeveryware.eos/README.md"><img src="/com.playeveryware.eos/Documentation~/images/PlayEveryWareLogo.gif" alt="README.md" width="5%"/></a>
-
 # Full Guide to Implementing the EOS Plugin for Unity
 
 This document serves as the starting point for a beginning-to-end guide on how to implement the EOS Plugin for Unity into your game.
@@ -135,7 +133,7 @@ For more information on Applications, see [Epic's documentation on Applications 
 
 With a Client Policy, Client, and Application created, you're ready to start adding the EOS Plugin for Unity to your game.
 Follow [our documentation for adding the plugin to your project](/Documentation~/add_plugin.md).
-Once successfully included, follow [the guidance on Importing the Samples](/Documentation~/samples.md).
+Once successfully included, follow [the guidance on Importing the Samples](Documentation~/samples.md).
 In the EOS Plugin for Unity project, the provided code with the plugin will give you the ability to use EOS SDK's interfaces using a convenient C# wrapper.
 The Samples come with scenes that demonstrate the usage of the EOS Plugin for Unity's Manager classes for each Sample's domain.
 
@@ -151,15 +149,15 @@ Essentially this value is used to encrypt Player Data Storage and Title Data Sto
 
 It is recommended that you use the `Dev` Sandbox and `Dev Deployment` Sandbox while configuring the plugin.
 By using the Dev environment information, the EOS Plugin for Unity will use this environment when no other environment is assumed.
-If your game is deployed through the Epic Game Store, the game will be launched with `-epicsandboxid` and `epicdeploymentid` arguments, which the EOS Plugin for Unity will use instead of your configured Sandbox and Deployment.
+If your game is deployed through the Epic Game Store, the game will be launched with `-epicsandboxid` and `-epicdeploymentid` arguments, which the EOS Plugin for Unity will use instead of your configured Sandbox and Deployment.
 
 For more information on the use of the Encryption Key, see [Epic's documentation on Title Storage Interface](https://dev.epicgames.com/docs/game-services/title-storage).
 
 ## Starting to Use the Samples
 
 At this moment your game is set up to utilize the EOS Plugin for Unity.
-The samples are documented [in the EOS Plugin for Unity Walkthrough documentation](https://github.com/PlayEveryWare/eos_plugin_for_unity/blob/stable/com.playeveryware.eos/Documentation~/Walkthrough.md), which leads to individual Scene walk throughs.
-Assuming your Client Policy is set up to be permissive, consider validating the plugin inclusion by using [the Lobbies Sample](/com.playeveryware.eos/Documentation~/scene_walkthrough/lobbies_walkthrough.md).
+The samples are documented [in the EOS Plugin for Unity Walkthrough documentation](https://github.com/EOS-Contrib/eos_plugin_for_unity/blob/stable/Documentation~/Walkthrough.md), which leads to individual Scene walk throughs.
+Assuming your Client Policy is set up to be permissive, consider validating the plugin inclusion by using [the Lobbies Sample](/Documentation~/scene_walkthrough/lobbies_walkthrough.md).
 Open the Lobbies sample in the scene, and start running the game. Note if there are any errors in the logs from the EOS SDK Plugin.
 
 The Lobbies sample is chosen because, assuming a permissive Client Policy, there's no needed further setup in the Epic Developer Portal.

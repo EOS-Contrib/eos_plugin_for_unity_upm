@@ -1,5 +1,3 @@
-<a href="/com.playeveryware.eos/README.md"><img src="/com.playeveryware.eos/Documentation~/images/PlayEveryWareLogo.gif" alt="README.md" width="5%"/></a>
-
 # <div align="center">Documentation Style Guide</div>
 ---
 
@@ -33,24 +31,9 @@ Fundamentally (and very broadly speaking) every document should contain two or o
 
 # Header 
 
-## Logo:
-
-Each document should start (before the document title) with the PlayEveryWare, Inc. logo. The image should be surrounded by a link (`<a> </a>`) tag with the `href` set to the main [README.md document](/README.md), and with the width of the image set to 10%.
-
-Markdown:
-```markdown
-<a href="/README.md">
-    <img src="/Documentation~/images/PlayEveryWareLogo.gif" alt="PlayEveryWare, Inc. Logo" width="10%"/>
-</a>
-```
-
-What it looks like:
-
-<a href="/README.md"><img src="/Documentation~/images/PlayEveryWareLogo.gif" alt="PlayEveryWare, Inc. Logo" width="10%"/></a>
-
 ## Title:
 
-Following the PlayEveryWare, Inc. logo should be the title of the document centered, followed immediately by a horizontal rule. 
+The title of the document should be centered, followed immediately by a horizontal rule. 
 
 As an example of how to properly add a title to the document, below is the markdown used to create the header for _this_ document.
 
@@ -152,7 +135,7 @@ Web links can be written by surrounding the text you want as the link text in br
 
 When linking to a header within the same document, the link can consist of just the pound sign followed by the header name. 
 
-When linking to another document, the base folder can be the start of the link, so `'/docs/android/README_Android.md'` would be an acceptable link. Additionally you can link to a specific area in another document by adding the pound sign and name at the end of the link, `'/com.playeveryware.eos/README.md#prerequisites'`. when ending a sentence with a link, make sure the period is not accidentally included in the url portion of the link.
+When linking to another document, the base folder can be the start of the link, so `'/docs/android/README_Android.md'` would be an acceptable link. Additionally you can link to a specific area in another document by adding the pound sign and name at the end of the link, `'/README.md#prerequisites'`. when ending a sentence with a link, make sure the period is not accidentally included in the url portion of the link.
 
 Example markdown linking to a specific section within a document:
 

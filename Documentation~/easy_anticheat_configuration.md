@@ -1,5 +1,3 @@
-<a href="/com.playeveryware.eos/README.md"><img src="/com.playeveryware.eos/Documentation~/images/PlayEveryWareLogo.gif" alt="README.md" width="5%"/></a>
-
 # <div align="center">How to configure Easy Anti-Cheat</div>
 ---
 
@@ -31,7 +29,7 @@ If you would like to test the functionality of EAC as it pertains to file integr
 
     If, when launching with `EACBootstrapper.exe` you get a message akin to the following:
 
-    <img src="/com.playeveryware.eos/Documentation~/images/EAC_not_installed.png" width="450" />
+    <img src="/Documentation~/images/EAC_not_installed.png" width="450" />
 
     Then open an elevated (Administrator) terminal window within the `EasyAntiCheat` directory at the root of your build directory, and type the following command:
 

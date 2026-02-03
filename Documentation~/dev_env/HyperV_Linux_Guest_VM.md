@@ -1,5 +1,3 @@
-<a href="/com.playeveryware.eos/README.md"><img src="/com.playeveryware.eos/Documentation~/images/PlayEveryWareLogo.gif" alt="README.md" width="5%"/></a>
-
 # <div align="center">Setting up a Hyper-V Linux Guest VM</div>
 ---
 
@@ -47,7 +45,7 @@ Setting up network configuration can be a little bit confusing if you're doing i
 
     When it's done it should look like this:
 
-    ![](/com.playeveryware.eos/Documentation~/images/hyperv_linux_guest_vm/finished-virtual-switch.png)
+    ![](/Documentation~/images/hyperv_linux_guest_vm/finished-virtual-switch.png)
 
 ## Step 3: Disable Enhanced Session
 

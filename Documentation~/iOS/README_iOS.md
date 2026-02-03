@@ -1,8 +1,3 @@
-<a href="/README.md"><img src="/Documentation~/images/PlayEveryWareLogo.gif" alt="Lobby Screenshot" width="5%"/></a>
-
-<div align="center"> <img src="/Documentation~/images/EOSPluginLogo.png" alt="PlayEveryWare EOS Plugin for Unity" /> </div>
-
-
 # <div align="center">iOS Getting Started</div>
 ---
 
@@ -22,7 +17,7 @@ You can follow the standard <a href="/README.md#importing-the-plugin">Importing 
 
 ## Samples
 
-You can follow the standard <a href="/com.playeveryware.eos/README.md#samples">Samples</a> process. Please note the details in the <a href="#running-the-samples">Running the samples</a> section when running the samples from a build for iOS.
+You can follow the standard <a href="/README.md#samples">Samples</a> process. Please note the details in the <a href="#running-the-samples">Running the samples</a> section when running the samples from a build for iOS.
 
 > [!WARNING]
 > The EOS Overlay is not yet implemented for iOS.
