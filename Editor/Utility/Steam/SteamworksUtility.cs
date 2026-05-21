@@ -63,14 +63,14 @@ namespace PlayEveryWare.EpicOnlineServices.Editor.Utility
                  Steamworks.Constants.STEAMNETWORKINGUTILS_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMAPPS_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMFRIENDS_INTERFACE_VERSION,
-                 Steamworks.Constants.STEAMGAMESEARCH_INTERFACE_VERSION,
+                 // Steamworks.Constants.STEAMGAMESEARCH_INTERFACE_VERSION, // Removed from Steam SDK, no longer in Steamworks.NET
                  Steamworks.Constants.STEAMHTMLSURFACE_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMHTTP_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMINPUT_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMINVENTORY_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMMATCHMAKINGSERVERS_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMMATCHMAKING_INTERFACE_VERSION,
-                 Steamworks.Constants.STEAMMUSICREMOTE_INTERFACE_VERSION,
+                 // Steamworks.Constants.STEAMMUSICREMOTE_INTERFACE_VERSION, // Removed from Steam SDK, no longer in Steamworks.NET
                  Steamworks.Constants.STEAMMUSIC_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMNETWORKINGMESSAGES_INTERFACE_VERSION,
                  Steamworks.Constants.STEAMNETWORKINGSOCKETS_INTERFACE_VERSION,
