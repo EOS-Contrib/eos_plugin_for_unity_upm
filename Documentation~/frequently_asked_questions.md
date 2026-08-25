@@ -28,7 +28,7 @@
 ## Why does the plugin fail to work after changing configuration?
 
 To rerun in UnityEditor without rebooting, we must reload the EOS SDK dll between runs.  
-To find out why and how to do so look see our documentation on [Unity Specific aspects of implementing EOS](https://github.com/EOS-Contrib/eos_plugin_for_unity/blob/development/com.playeveryware.eos/Documentation~/unity_specific.md).
+To find out why and how to do so look see our documentation on [Unity Specific aspects of implementing EOS](https://github.com/EOS-Contrib/eos_plugin_for_unity/blob/development/Documentation~/unity_specific.md).
 
 ## How do I override sandbox or deployment IDs when publishing on the Epic Games Store?
 
