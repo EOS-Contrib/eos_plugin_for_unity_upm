@@ -166,8 +166,8 @@ This is a benign error and will not affect the functionality of the Social Overl
 
 ## Why does the plugin fail in a standalone build after working in editor?
 
-If you're using IL2CPP, it can strip necessary code files from the standalone build. Follow this [IL2CPP Setup guide](/com.playeveryware.eos/Documentation~/IL2CPP%20Setup.md) 
+If you're using IL2CPP, it can strip necessary code files from the standalone build. Follow this [IL2CPP Setup guide](/Documentation~/IL2CPP%20Setup.md) 
 
 ## Why is the EOS client config ignored when opened from Epic Games Launcher?
 
-When starting a client through the Epic Games Launcher, it can include launch parameters for overriding the built in client config. See [Epic Games Store](/com.playeveryware.eos/Documentation~/epic_game_store.md) and [Epic Dev Resources: Manage Artifacts](https://dev.epicgames.com/docs/epic-games-store/store-presence/manage-artifacts#step-5-select-deployment-id-for-epic-online-services-only) for more information.
+When starting a client through the Epic Games Launcher, it can include launch parameters for overriding the built in client config. See [Epic Games Store](/Documentation~/epic_game_store.md) and [Epic Dev Resources: Manage Artifacts](https://dev.epicgames.com/docs/epic-games-store/store-presence/manage-artifacts#step-5-select-deployment-id-for-epic-online-services-only) for more information.

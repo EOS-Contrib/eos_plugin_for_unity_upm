@@ -14,7 +14,7 @@ The following document outlines the two methods with which you can add the plugi
     ![Unity Add Git Package](/Documentation~/images/unity_package_git.gif)
 
 4. Select `Add Package from Git URL`.
-6. Paste in `git@github.com:EOS-Contrib/eos_plugin_for_unity_upm.git`.
+6. Paste in `https://github.com/EOS-Contrib/eos_plugin_for_unity_upm.git`.
 7. After the package has finished installing, [import the samples](/Documentation~/samples.md).
 8. Finally, [Configure the Plugin](/Documentation~/configure_plugin.md).
 
