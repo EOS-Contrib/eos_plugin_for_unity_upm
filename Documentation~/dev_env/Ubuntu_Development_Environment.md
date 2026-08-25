@@ -7,7 +7,7 @@ This is the second part of the guide for using Hyper-V to set up a Linux environ
 
 ## Setup your Linux Guest VM in Hyper-V
 
-If you want to set up your linux environment inside a virtual machine, and have not yet done so, follow [this](/Documentation~/dev_env/HyperV_Linux_Guest_VM.md) guide first.
+If you want to set up your linux environment inside a virtual machine, and have not yet done so, follow [this](/com.playeveryware.eos/Documentation~/dev_env/HyperV_Linux_Guest_VM.md) guide first.
 
 ## Setting up your Linux Environment:
 
@@ -102,15 +102,15 @@ If you are using Hyper-V, and failed to increase the size of the disk before ins
 
 1. In Hyper-V, edit the virtual machine and navigate to "Hard Drive"
     
-    ![](/Documentation~/images/ubuntu_dev_env/vm-settings.png)
+    ![](/com.playeveryware.eos/Documentation~/images/ubuntu_dev_env/vm-settings.png)
 
 2. Select "Edit"
 
-    ![](/Documentation~/images/ubuntu_dev_env/edit-disk.png)
+    ![](/com.playeveryware.eos/Documentation~/images/ubuntu_dev_env/edit-disk.png)
 
 1. If "Edit" is greyed out, you will need to disable Checkpoints. Navigate to Checkpoints and unselect the checkbox that says "Enable checkpoints"
 
-    ![](/Documentation~/images/ubuntu_dev_env/disable-checkpoints.png)
+    ![](/com.playeveryware.eos/Documentation~/images/ubuntu_dev_env/disable-checkpoints.png)
 
 3. The edit window will ask you to locate the disk. This should already be filled out. Select "Next"
 4. Choose "Expand"
