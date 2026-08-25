@@ -32,7 +32,7 @@ namespace PlayEveryWare.EpicOnlineServices.Editor.Build
         [SerializeField]
         public List<SrcDestPair> source_to_dest;
 
-        [SerializeField]
+        [SerializeField]   
         public List<string> blacklist;
     }
 }
