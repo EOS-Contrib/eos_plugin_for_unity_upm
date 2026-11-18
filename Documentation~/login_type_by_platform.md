@@ -2,11 +2,11 @@
 
 | Platform | Account Portal              | Persistent Auth | External Auth       | Exchange Codes | Dev Auth            |
 |--:|-|-|-|-|-|
-| [Windows](/Documentation~/player_authentication.md) | ✅ | ✅ |  ✅ [^1] | ✅ [^2] | ✅ [^3] |
-| [Mac OS](/Documentation~/player_authentication.md) | ✅ | ✅ | ✅ [^1] | ✅ [^2] | ✅ [^3] |
-| [Linux](/Documentation~/player_authentication.md) | ✅ | ✅ | ✅ [^1] | ✅ [^2] | ✅ [^3] |
-| [iOS](/Documentation~/player_authentication.md) | ✅ | ✅ | ❌ | ❌ | ❌ |
-| [Android](/Documentation~/player_authentication.md) | ✅ | ✅ |❌ |❌ | ❌ |
+| [Windows](./player_authentication.md) | ✅ | ✅ |  ✅ [^1] | ✅ [^2] | ✅ [^3] |
+| [Mac OS](./player_authentication.md) | ✅ | ✅ | ✅ [^1] | ✅ [^2] | ✅ [^3] |
+| [Linux](./player_authentication.md) | ✅ | ✅ | ✅ [^1] | ✅ [^2] | ✅ [^3] |
+| [iOS](./player_authentication.md) | ✅ | ✅ | ❌ | ❌ | ❌ |
+| [Android](./player_authentication.md) | ✅ | ✅ |❌ |❌ | ❌ |
 | GDK            | ❌       | ❌        | ✅              | ❌       | ❌   |
 | PS4            | ❌       | ❌        | ✅              | ❌       | ❌   |
 | PS5            | ❌       | ❌        | ✅              | ❌       | ❌   |

@@ -69,6 +69,15 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             UpdateLocalUserInfo();
         }
 
+        public void OnConnectLogout(Epic.OnlineServices.Connect.LogoutCallbackInfo logoutCallbackInfo)
+        {
+            LocalUserInfo = default;
+            foreach (var callback in LocalUserInfoChangedCallbacks)
+            {
+                callback?.Invoke(LocalUserInfo);
+            }
+        }
+
         public void OnAuthLogout(LogoutCallbackInfo logoutCallbackInfo)
         {
             LocalUserInfo = default;
@@ -154,6 +163,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
 
         private void OnQueryUserInfoIdCompleted(ref QueryUserInfoCallbackInfo data)
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             OnUserInfoQueryIdCallback Callback = data.ClientData as OnUserInfoQueryIdCallback;
 
             if (data.ResultCode != Result.Success)
@@ -208,6 +222,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
 
         private void OnQueryUserInfoDisplayNameCompleted(ref QueryUserInfoByDisplayNameCallbackInfo data)
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             OnUserInfoQueryDisplayNameCallback Callback = data.ClientData as OnUserInfoQueryDisplayNameCallback;
 
             //QueryUserInfoByDisplayNameCallbackInfo.DisplayName memory is only valid within callback scope, so copy for safety

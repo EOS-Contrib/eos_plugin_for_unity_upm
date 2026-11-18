@@ -68,7 +68,7 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
     /// <summary>
     /// Class <c>EOSFriendsManager</c> is a simplified wrapper for EOS [FriendsInterface](https://dev.epicgames.com/docs/services/en-US/Interfaces/Friends/index.html).
     /// </summary>
-    public class EOSFriendsManager : IEOSSubManager
+    public class EOSFriendsManager : IEOSSubManager, IEOSOnAuthLogin, IEOSOnAuthLogout
     {
         private Dictionary<EpicAccountId, FriendData> CachedFriends;
         private bool CachedFriendsDirty;
@@ -196,6 +196,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             //    return;
             //}
 
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ResultCode != Result.Success)
             {
                 Debug.LogErrorFormat("Friends (SendInviteCallback): SendInvite error: {0}", data.ResultCode);
@@ -235,6 +240,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             //    AcceptInviteCallback?.Invoke(Result.InvalidState);
             //    return;
             //}
+
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
 
             if (data.ResultCode != Result.Success)
             {
@@ -276,6 +286,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             //    return;
             //}
 
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ResultCode != Result.Success)
             {
                 Debug.LogErrorFormat("Friends (OnRejectInviteCompleted): RejectInvite error: {0}", data.ResultCode);
@@ -313,6 +328,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             //    QueryFriendCallback?.Invoke(Result.InvalidState);
             //    return;
             //}
+
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
 
             if (data.ResultCode != Result.Success)
             {
@@ -405,6 +425,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             //    return;
             //}
 
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ResultCode != Result.Success)
             {
                 Debug.LogErrorFormat("Friends (OnQueryPresenceCompleted): Error calling QueryPresence: " + data.ResultCode);
@@ -471,7 +496,12 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
 
         private void QueryFriendsConnectMappings()
         {
-            if(CachedFriends.Count == 0)
+            if (EOSManager.Instance.GetProductUserId() == null || !EOSManager.Instance.GetProductUserId().IsValid())
+            {
+                return;
+            }
+
+            if (CachedFriends.Count == 0)
             {
                 Debug.LogError("Friends (QueryFriendsConnectMappings): No friend cache.");
                 return;
@@ -511,6 +541,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             //    Debug.LogError("Friends (OnQueryExternalAccountMappingsCompleted): data is null");
             //    return;
             //}
+
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
 
             if (data.ResultCode != Result.Success)
             {
@@ -609,6 +644,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             //    return;
             //}
 
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ResultCode != Result.Success)
             {
                 Debug.LogErrorFormat("Friends (QueryUserInfoByDisplaynameCompleted): ResultCode error: {0}", data.ResultCode);
@@ -654,6 +694,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             //    return;
             //}
 
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ResultCode != Result.Success)
             {
                 Debug.LogErrorFormat("Friends (SendInviteCompleted): ResultCode error: {0}", data.ResultCode);
@@ -695,6 +740,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             //    QueryUserInfoCallback?.Invoke(Result.InvalidState);
             //    return;
             //}
+
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
 
             if (data.ResultCode != Result.Success)
             {
@@ -768,6 +818,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             //    return;
             //}
 
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ResultCode != Result.Success)
             {
                 Debug.LogErrorFormat("Friends (OnShowFriendsCallback): Error calling ShowFriends: " + data.ResultCode);
@@ -797,6 +852,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             //    HideFriendsOverlayCallback?.Invoke(Result.InvalidState);
             //    return;
             //}
+
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
 
             if (data.ResultCode != Result.Success)
             {
@@ -921,7 +981,15 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             //    return;
             //}
 
-            QueryPresenceInfo(data.LocalUserId, data.PresenceUserId);
+            var authInterface = EOSManager.Instance.GetEOSAuthInterface();
+            if (authInterface != null && authInterface.GetLoginStatus(data.LocalUserId) == LoginStatus.LoggedIn)
+            {
+                QueryPresenceInfo(data.LocalUserId, data.PresenceUserId);
+            }
+            else
+            {
+                Debug.LogFormat("Friends (OnPresenceChangedCallbackHandler): Skipped presence query, user is not logged in: {0}", data.LocalUserId.Redact());
+            }
         }
 
         /// <summary>User Logged In actions</summary>
@@ -946,6 +1014,17 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
             {
                 UnsubscribeFromFriendUpdates(localUser);
             }
+        }
+
+        public void OnAuthLogin(Epic.OnlineServices.Auth.LoginCallbackInfo loginCallbackInfo)
+        {
+            QueryFriends(null);
+            SubscribeToFriendUpdates(loginCallbackInfo.LocalUserId);
+        }
+
+        public void OnAuthLogout(Epic.OnlineServices.Auth.LogoutCallbackInfo logoutCallbackInfo)
+        {
+            UnsubscribeFromFriendUpdates(logoutCallbackInfo.LocalUserId);
         }
     }
 }

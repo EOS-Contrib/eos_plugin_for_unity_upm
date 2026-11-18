@@ -468,6 +468,10 @@ namespace Epic.OnlineServices
 		/// </summary>
 		EcomCatalogOfferInvalid = 4006,
 		/// <summary>
+		/// The purchase was blocked because the external purchase (CTC) token required for this paid purchase could not be resolved on this device (for example, the OS version cannot determine the catalog region).
+		/// </summary>
+		EcomCheckoutCTCUnavailable = 4007,
+		/// <summary>
 		/// Session is already in progress
 		/// </summary>
 		SessionsSessionInProgress = 5000,
@@ -915,6 +919,14 @@ namespace Epic.OnlineServices
 		/// Failed to join room due to room options mismatch
 		/// </summary>
 		RoomOptionsMismatch = 13012,
+		/// <summary>
+		/// EOS RTC connection failed, the media server rejected the request because the room was not found
+		/// </summary>
+		RoomNotFound = 13014,
+		/// <summary>
+		/// EOS RTC room connection was replaced because the same user joined the room from another session, which now holds the room
+		/// </summary>
+		DuplicateSession = 13015,
 		/// <summary>
 		/// The number of available Snapshot IDs have all been exhausted.
 		/// </summary>

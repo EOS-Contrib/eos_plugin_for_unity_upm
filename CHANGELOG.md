@@ -2,6 +2,48 @@
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.3.0] - 2026-11-17
+
+### Added
+- Add: `EOSManager.StartConnectLogout` to log out of the Connect interface, with `IEOSOnConnectLogout` and `EOSManager.AddConnectLogoutListener` / `RemoveConnectLogoutListener` for logout notifications. Pull request [#1322](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1322).
+- Add: `EOSManager.StartAuthLogout` to log out of the Auth interface. Pull request [#1322](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1322).
+- Add: EOS SDK public symbols are now included in the package under `Symbols~/`. Pull request [#1335](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1335).
+
+### Changed
+- Change: New EOS SDK version 1.20.0.3-CL60063259
+- Change: `EOSManager.StartLogout` is now obsolete; use `EOSManager.StartAuthLogout` instead. Pull request [#1322](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1322).
+- Change: Documentation now states that Windows games must ship the Visual C++ runtime required by the EOS SDK. Pull request [#1328](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1328).
+- Change: Sample logout now also logs out of Connect after the Auth logout. Pull request [#1322](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1322).
+- Change: Sample login menu now remembers the last successful login type. Pull request [#1320](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1320).
+- Change: Fixed broken links and formatting in the documentation. Pull request [#1337](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1337).
+
+### Fixed
+- Fix: Sample sessions manager did not inform session members when the local user logged out. Pull request [#1323](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1323).
+- Fix: Sample friends manager did not remove its friend and presence update handlers on Auth logout. Pull request [#1327](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1327).
+- Fix: Sample logout now offers a retry if the Connect logout fails. Pull request [#1329](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1329).
+- Fix: Sample lobby modification with an empty Bucket ID field now keeps the lobby's current Bucket ID. Pull request [#1321](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1321).
+- Fix: Sample console input field did not submit text when the on-screen keyboard closed on Unity 6. Pull request [#1325](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1325).
+
+### Removed
+- Remove: `EOSManager.ClearConnectId`; use `EOSManager.StartConnectLogout` instead. Pull request [#1322](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1322).
+- Remove: Sample no longer references the `Password` login credential type, as EOS SDK 1.20 deprecated it and no longer supports it. Pull request [#1334](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1334).
+
+## [6.2.0] - 2026-09-22
+
+### Changed
+- Change: New EOS SDK version 1.19.2.1-CL58105819
+- Change: Improvements in logging redaction: now the it fully replace the string to redact if it's short. Pull request [#1295](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1295).
+- Change: More logs in the sample app are now redacted. Pull request [#1301](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1301).
+
+### Added
+- Add: The sandbox ID and the the deployment ID are logged when the command line supplies one on test apps. Pull request [#1300](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1300).
+- Add: Adds a warning when a sandbox ID arrives without a matching deployment ID. Pull request [#1300](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1300).
+
+### Fixed
+- Fix: Address bug that could cause the friends tab to become irresponsibe on the test apps. Pull request [#1297](https://github.com/EOS-Contrib/eos_plugin_for_unity/pull/1297).
+- Fix: Debug.LogWarningFormat entry was wrongly not logging an id to the console. [`d7431cd2`](https://github.com/EOS-Contrib/eos_plugin_for_unity/commit/d7431cd24ddfc751fc4be19b32f6b2c2b23d86f1).
+- Fix: Arm64 builds did not include xaudio2_9redis.dll in the build artifact.
+
 ## [6.1.2] - 2026-08-25
 
 ### Changed
@@ -9,7 +51,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 - Fix: Corrected a bug that prevented some platforms from showing in the EOS Configuration tool.
-
 
 ## [6.1.1] - 2026-07-22
 

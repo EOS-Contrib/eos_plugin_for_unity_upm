@@ -838,6 +838,13 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
                 return;
             }
 
+            // Notify session owner/members while the user is still logged in and sessions are still tracked.
+            // The destroy callbacks fire after Reset() and skip their own inform, so this is the only notification.
+            foreach (KeyValuePair<string, Session> session in GetCurrentSessions())
+            {
+                InformOnDestroy(session.Key);
+            }
+
             UnsubscribeFromGameInvites();
             UnsubscribeToSessionMessageConnectionRequests();
 
@@ -969,6 +976,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
         /// <param name="data"></param>
         private static void OnSetPresenceCompleteCallback(ref SetPresenceCallbackInfo data)
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ResultCode != Result.Success)
             {
                 Debug.LogError($"{nameof(EOSSessionsManager)} ({nameof(OnSetPresenceCompleteCallback)}): error code: {data.ResultCode}");
@@ -1184,6 +1196,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
         /// <param name="data">Callback information provided by Epic Online Services about the success of the operation.</param>
         private void OnUpdateSessionCompleteCallback_ForCreate(ref UpdateSessionCallbackInfo data)
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             SessionsManagerCreateSessionCallback callback = data.ClientData as SessionsManagerCreateSessionCallback;
 
             bool removeSession = true;
@@ -1555,6 +1572,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
         /// <param name="data">Callback information about the success.</param>
         private void OnFindSessionsCompleteCallback(ref SessionSearchFindCallbackInfo data)
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             // If the result is NotFound, that just means there were zero hits; it is not an error
             if (data.ResultCode != Result.Success && data.ResultCode != Result.NotFound)
             {
@@ -1819,6 +1841,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
         /// <param name="data">Callback information about the operation.</param>
         private void OnDestroySessionCompleteCallback(ref DestroySessionCallbackInfo data)
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ClientData == null)
             {
                 Debug.LogError($"{nameof(EOSSessionsManager)} ({nameof(OnDestroySessionCompleteCallback)}): data.ClientData is null!");
@@ -1851,8 +1878,13 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
                 sessionData.DestroyCallback?.Invoke(new(sessionData.SessionToDestroyName, data.ResultCode));
                 return;
             }
-            
-            InformOnDestroy(sessionData.SessionToDestroyName);
+
+            // Inform of the session being destroyed on login. When logging out OnLoggedOut already
+            // informed the owner/members and Reset() cleared the local state.
+            if (IsUserLoggedIn)
+            {
+                InformOnDestroy(sessionData.SessionToDestroyName);
+            }
 
             if (CurrentSessions.TryGetValue(sessionData.SessionToDestroyName, out Session Session))
             {
@@ -1912,6 +1944,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
         /// <param name="callback">Optional callback to run with the result of joining.</param>
         private void OnJoinSessionListener(ref JoinSessionCallbackInfo data, SessionDetails sessionHandle, Action<Result> callback = null) // OnJoinSessionCallback
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ResultCode != Result.Success)
             {
                 Debug.LogError($"{nameof(EOSSessionsManager)} ({nameof(OnJoinSessionListener)}): error code: {data.ResultCode}");
@@ -2137,6 +2174,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
         /// </param>
         private void OnStartSessionCompleteCallBack(ref StartSessionCallbackInfo data)
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ClientData == null)
             {
                 Debug.LogError($"{nameof(EOSSessionsManager)} ({nameof(OnStartSessionCompleteCallBack)}): data.ClientData is null");
@@ -2202,6 +2244,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
         /// </param>
         private void OnEndSessionCompleteCallback(ref EndSessionCallbackInfo data)
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             string sessionName = (string)data.ClientData;
 
             if (data.ResultCode != Result.Success)
@@ -2282,6 +2329,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
         /// </param>
         private void OnRegisterCompleteCallback(ref RegisterPlayersCallbackInfo data)
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ResultCode != Result.Success)
             {
                 Debug.LogError($"{nameof(EOSSessionsManager)} ({nameof(OnRegisterCompleteCallback)}): error code: {data.ResultCode}");
@@ -2358,6 +2410,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
         /// </param>
         private void OnUnregisterCompleteCallback(ref UnregisterPlayersCallbackInfo data)
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ResultCode != Result.Success)
             {
                 Debug.LogError($"{nameof(EOSSessionsManager)} ({nameof(OnUnregisterCompleteCallback)}): error code: {data.ResultCode}");
@@ -2573,6 +2630,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
         /// <param name="data">Callback information about the update attempt.</param>
         private void OnUpdateSessionCompleteCallback(ref UpdateSessionCallbackInfo data)
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ResultCode != Result.Success)
             {
                 OnSessionUpdateFinished(false, data.SessionName, data.SessionId);
@@ -2761,6 +2823,11 @@ namespace PlayEveryWare.EpicOnlineServices.Samples
         /// <param name="data">Callback information about the success of the invitation.</param>
         private void OnSendInviteCompleteCallback(ref SendInviteCallbackInfo data)
         {
+            if (!data.ResultCode.IsOperationComplete())
+            {
+                return;
+            }
+
             if (data.ResultCode != Result.Success)
             {
                 Debug.LogError($"{nameof(EOSSessionsManager)} ({nameof(OnSendInviteCompleteCallback)}): error code: {data.ResultCode}");

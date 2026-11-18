@@ -242,6 +242,8 @@ EOS_RESULT_VALUE(EOS_Ecom_CheckoutLoadError, 4004)
 EOS_RESULT_VALUE(EOS_Ecom_PurchaseProcessing, 4005)
 /** The offer is not valid in the catalog for the current sandbox */
 EOS_RESULT_VALUE(EOS_Ecom_CatalogOfferInvalid, 4006)
+/** The purchase was blocked because the external purchase (CTC) token required for this paid purchase could not be resolved on this device (for example, the OS version cannot determine the catalog region). */
+EOS_RESULT_VALUE(EOS_Ecom_CheckoutCTCUnavailable, 4007)
 /** Session is already in progress */
 EOS_RESULT_VALUE(EOS_Sessions_SessionInProgress, 5000)
 /** Too many players to register with this session */
@@ -466,6 +468,10 @@ EOS_RESULT_VALUE(EOS_RTC_VoiceModerationModeMismatch, 13010)
 EOS_RESULT_VALUE(EOS_RTC_EmptyRecord, 13011)
 /** Failed to join room due to room options mismatch */
 EOS_RESULT_VALUE(EOS_RTC_RoomOptionsMismatch, 13012)
+/** EOS RTC connection failed, the media server rejected the request because the room was not found */
+EOS_RESULT_VALUE(EOS_RTC_RoomNotFound, 13014)
+/** EOS RTC room connection was replaced because the same user joined the room from another session, which now holds the room */
+EOS_RESULT_VALUE(EOS_RTC_DuplicateSession, 13015)
 /** The number of available Snapshot IDs have all been exhausted. */
 EOS_RESULT_VALUE(EOS_ProgressionSnapshot_SnapshotIdUnavailable, 14000)
 /** The KWS user does not have a parental email associated with the account.  The parent account was unlinked or deleted */
